@@ -11,6 +11,7 @@ const centerSection = document.querySelector('.center-section');
 const leftCard = document.querySelector('.cards-section>.left');
 const centerCard = document.querySelector('.cards-section>.center');
 const rightCard = document.querySelector('.cards-section>.right');
+const disclaimerSection = document.querySelector('.disclaimer-section');
 
 let brandList;
 
@@ -20,22 +21,37 @@ function updateHealthCheck() {
         .then(response => new Date(response).toLocaleTimeString())
         .then(() => healthText.textContent = "✅ Online")
         .then(() => centerSection.style.opacity = 1);
+}
 
+function searchLinkBuilder(bikeName) {
+    const linkText = "make a search!";
+    const linkRef = "https://duckduckgo.com/?q=" + bikeName + "+bike&atb=v1-1&iar=images&iax=images&ia=images";
+
+    var searchLink = document.createElement('a');
+    searchLink.appendChild(document.createTextNode(linkText));
+    searchLink.title = linkText;
+    searchLink.href = linkRef;
+    searchLink.target = "_blank";
+    return searchLink;
 }
 
 function updateCardsTitles(suggestion) {
-    const descriptionPlaceholder = "Bike additional data not available"
-
+    const descriptionPlaceholder = "Bike additional data not available: "
 
     leftCard.querySelector(".bike-title").textContent = suggestion[1].bike;
     centerCard.querySelector(".bike-title").textContent = suggestion[2].bike;
     rightCard.querySelector(".bike-title").textContent = suggestion[3].bike;
 
+    leftCard.querySelector(".bike-description").textContent = descriptionPlaceholder;
+    centerCard.querySelector(".bike-description").textContent = descriptionPlaceholder;
+    rightCard.querySelector(".bike-description").textContent = descriptionPlaceholder;
 
-    leftCard.querySelector(".bike-description").textContent = '';
-    centerCard.querySelector(".bike-description").textContent = '';
-    rightCard.querySelector(".bike-description").textContent = '';
+    leftCard.querySelector(".bike-description").appendChild(searchLinkBuilder(suggestion[1].bike));
+    centerCard.querySelector(".bike-description").appendChild(searchLinkBuilder(suggestion[2].bike));
+    rightCard.querySelector(".bike-description").appendChild(searchLinkBuilder(suggestion[3].bike));
+
     cardsSection.style.display = "flex";
+    disclaimerSection.style.visibility = "visible";
 
 }
 
@@ -53,8 +69,8 @@ async function getBrands() {
         .then(() => console.log("Loaded " + brandList.length + " brands"));
 }
 
-updateHealthCheck()
-getBrands()
+updateHealthCheck();
+getBrands();
 
 
 // The autoComplete.js Engine instance creator

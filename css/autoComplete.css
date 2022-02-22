@@ -13,7 +13,7 @@
     -webkit-box-sizing: border-box;
     font-size: 1rem;
     text-overflow: ellipsis;
-    color: rgba(255, 122, 122, 0.3);
+    color: #5B6B4D;
     outline: none;
     border-radius: 10rem;
     border: 0.05rem solid #5B6B4D;
@@ -46,7 +46,7 @@
 }
 
 .autoComplete_wrapper>input:focus::selection {
-    background-color: #5B6B4D;
+    background-color: #D3B878;
 }
 
 .autoComplete_wrapper>input::selection {
@@ -54,7 +54,7 @@
 }
 
 .autoComplete_wrapper>input:hover {
-    color: #5B6B4D;
+    color: #353b2e;
     transition: all 0.3s ease;
     -webkit-transition: all -webkit-transform 0.3s ease;
 }
@@ -97,9 +97,9 @@
     padding: 0.3rem 0.5rem;
     text-align: left;
     font-size: 1rem;
-    color: #212121;
+    color: #5B6B4D;
     border-radius: 0.35rem;
-    background-color: #D3B878;
+    background-color: white;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -109,16 +109,18 @@
 .autoComplete_wrapper>ul>li mark {
     background-color: transparent;
     color: black;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .autoComplete_wrapper>ul>li:hover {
     cursor: pointer;
-    background-color: #5B6B4D;
+    background-color: #D3B878;
+    color: #5B6B4D;
 }
 
 .autoComplete_wrapper>ul>li[aria-selected="true"] {
-    background-color: #5B6B4D;
+    background-color: #D3B878;
+    color: #5B6B4D;
 }
 
 @media only screen and (max-width: 600px) {
