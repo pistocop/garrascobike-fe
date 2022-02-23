@@ -108,7 +108,7 @@ body {
 
 .card {
     width: 20vh;
-    height: 35vh;
+    height: 38vh;
     text-align: center;
     border: 5px solid #806A3E;
     background-color: white;
@@ -120,6 +120,17 @@ body {
     font-weight: 900;
     margin: 2vh;
     border-bottom: 2px solid #5B6B4D;
+}
+
+.card>.bike-description>a {
+    color: #5B6B4D;
+    text-decoration: none;
+}
+
+.card>.bike-description>a:hover {
+    color: #5B6B4D;
+    text-decoration: underline;
+    font-weight: 900;
 }
 
 .disclaimer-section {
@@ -144,13 +155,14 @@ body {
 }
 
 .disclaimer-section>.second-p>a {
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: white;
     text-decoration: none;
-    font-style: italic;
 }
 
 .disclaimer-section>.second-p>a:hover {
     text-decoration: underline;
+    font-weight: 500;
 }
 
 .footer-section {

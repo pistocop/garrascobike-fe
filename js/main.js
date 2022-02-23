@@ -24,10 +24,12 @@ function updateHealthCheck() {
 }
 
 function searchLinkBuilder(bikeName) {
-    const linkText = "make a search!";
+    const linkText = "→ make a search!";
     const linkRef = "https://duckduckgo.com/?q=" + bikeName + "+bike&atb=v1-1&iar=images&iax=images&ia=images";
 
     var searchLink = document.createElement('a');
+
+    searchLink.appendChild(document.createElement('br'));
     searchLink.appendChild(document.createTextNode(linkText));
     searchLink.title = linkText;
     searchLink.href = linkRef;
