@@ -108,7 +108,7 @@ body {
 
 .card {
     width: 20vh;
-    height: 38vh;
+    /* min-height: 38vh; */
     text-align: center;
     border: 5px solid #806A3E;
     background-color: white;
@@ -120,6 +120,10 @@ body {
     font-weight: 900;
     margin: 2vh;
     border-bottom: 2px solid #5B6B4D;
+}
+
+.card>.bike-description {
+    margin: 3px;
 }
 
 .card>.bike-description>a {
