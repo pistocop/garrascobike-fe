@@ -1,6 +1,6 @@
 # garrascobike-fe
 
-> Front end code of the Garrascobike recommendation system
+> Front-end code of the Garrascobike recommendation system
 > 
 > 🔗 Website [link](https://pistocop.github.io/garrascobike-fe/)
 
