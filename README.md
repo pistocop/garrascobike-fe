@@ -3,6 +3,8 @@
 > Front-end code of the Garrascobike recommendation system
 > 
 > 🔗 Website [link](https://pistocop.github.io/garrascobike-fe/)
+> 
+> 📖 Project [guide](https://www.pistocop.dev/posts/garrascobike/)
 
 ## Technologies
 - Handmade HTML, CSS, JS
