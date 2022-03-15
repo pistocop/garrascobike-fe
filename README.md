@@ -34,8 +34,5 @@
 
 ## TODO
 
-**Content**
-- [ ] link `unsupervised prototype!` to the blog article
-
 **JS**
 - [ ] code refactory, follow [this stack overflow](https://stackoverflow.com/questions/45018338/javascript-fetch-api-how-to-save-output-to-variable-as-an-object-not-the-prom/61285073#61285073) info
