@@ -80,6 +80,17 @@ body {
     max-width: 80vw;
 }
 
+.health-section>.health-text>#health-timestamp>a {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.health-section>.health-text>#health-timestamp>a:hover {
+    text-decoration: underline;
+    font-weight: 900;
+}
+
 .center-section {
     flex: 1;
     width: 50vw;
@@ -180,9 +191,11 @@ body {
 .footer-text>a {
     color: white;
     text-decoration: none;
+    font-style: italic;
 }
 
 .footer-text>a:hover {
     text-decoration: underline;
     font-weight: 900;
+    font-style: italic;
 }

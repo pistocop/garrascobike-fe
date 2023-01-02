@@ -15,6 +15,8 @@
 
 
 ## Guides
+- Install `live-server`
+  - `$ npm install -g live-server` - [link](https://www.npmjs.com/package/live-server)
 - Run locally:
   - `$ live-server --no-browser --port=8080`
 
